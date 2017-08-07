@@ -5,6 +5,7 @@ body, html {
   font-size: 14px;
 }
 
+/* header.html, */
 .instructions .container h1 {
   font-size: 32px;
   font-weight: 600;
@@ -12,7 +13,7 @@ body, html {
 
 .instructions {
   background-color: #333333;
-  color: #DDDDDD;
+  color: darkgray;
   padding: 15px;
 }
 
