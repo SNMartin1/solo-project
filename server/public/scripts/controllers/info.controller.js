@@ -1,5 +1,26 @@
-myApp.controller('InfoController', function(UserService) {
+myApp.controller('InfoController', function(UserService, $http) {
   console.log('InfoController created');
-  var vm = this;
-  vm.userService = UserService;
+  var gc = this;
+  gc.userService = UserService;
+  gc.newGame = {};
+
+  getGames();
+
+
+//function to add game to user's library
+  gc.addGames = function() {
+      console.log('add game', gc.newGame);
+      $http.post('/info', gc.newGame)
+        .then(function(response) {
+          console.log('added game:', response);
+          // getGames();
+        });
+    };
+
+  function getGames() {
+    $http.get('/info').then(function(response) {
+      console.log(response.data);
+      gc.games = response.data;
+    });
+  }
 });

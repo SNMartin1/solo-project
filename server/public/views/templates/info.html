@@ -8,33 +8,41 @@
           <div class="form-group">
             <label for="nameOfGame" class="col-sm-2 control-label">Name of Game</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" placeholder="Name of Game">
+              <input ng-model="ic.newGame.name" type="text" class="form-control" placeholder="Name of Game">
             </div>
           </div>
 
           <div class="form-group">
             <label for="numberOfPlayers" class="col-sm-2 control-label">Number of Players</label>
             <div class="col-sm-10">
-              <input type="text"  class="form-control" placeholder="Number of Players">
+              <input ng-model="ic.newGame.numPlayers" type="text"  class="form-control" placeholder="Number of Players">
             </div>
           </div>
 
           <div class="form-group">
             <label for="estGameTime" class="col-sm-2 control-label">Estimated Game Time</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" placeholder="Estimated Game Time">
+              <input ng-model="ic.newGame.estGameTime" type="text" class="form-control" placeholder="Estimated Game Time">
             </div>
           </div>
 
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-default">Add Game</button>
+              <button type="submit" class="btn btn-default" ng-click="ic.addGames()">Add Game</button>
             </div>
           </div>
         </form>
 
         </div>
       </form>
+      <!-- {{ic.newGame}} -->
+      <div ng-repeat="game in gc.newGame" class="well col-md-4 col-sm-6" id="listings" style="background-color: lightgray;">
+        <ul>
+          <h3>{{game.name}}</h3>
+          <li>Number of Players: {{game.numPlayers}}</li>
+          <li>Estimated Game Time: {{game.estGameTime}}</li>
+        </ul>
+      </div>
   </div>
 </div>
