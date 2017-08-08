@@ -3,6 +3,7 @@ myApp.controller('InfoController', function(UserService, $http) {
   var gc = this;
   gc.userService = UserService;
   gc.newGame = {};
+  gc.userGames = [];
 
   getGames();
 
@@ -13,14 +14,15 @@ myApp.controller('InfoController', function(UserService, $http) {
       $http.post('/info', gc.newGame)
         .then(function(response) {
           console.log('added game:', response);
-          // getGames();
+          getGames();
         });
     };
 
+//gets all the user's games
   function getGames() {
     $http.get('/info').then(function(response) {
       console.log(response.data);
-      gc.games = response.data;
+      gc.userGames = response.data;
     });
   }
 });

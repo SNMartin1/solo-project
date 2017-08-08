@@ -37,9 +37,9 @@
         </div>
       </form>
       <!-- {{ic.newGame}} -->
-      <div ng-repeat="game in gc.newGame" class="well col-md-4 col-sm-6" id="listings" style="background-color: lightgray;">
+      <div ng-repeat="game in ic.userGames" class="well col-md-4 col-sm-6" id="listings" style="background-color: lightgray;">
         <ul>
-          <h3>{{game.name}}</h3>
+          <li>{{game.name}}</li>
           <li>Number of Players: {{game.numPlayers}}</li>
           <li>Estimated Game Time: {{game.estGameTime}}</li>
         </ul>
