@@ -1,0 +1,53 @@
+<div></div>
+<div class="container">
+  <div class="addGameSession">
+      <form>
+        <div>
+
+          <form class="form-horizontal">
+          <div class="form-group">
+            <label for="playNumber" class="col-md-2 control-label">Add Play</label>
+            <div class="col-md-8">
+              <input ng-model="ic.newGame.name" type="text" class="form-control" placeholder="Yes or No">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="datePlayed" class="col-md-2 control-label">Date Played</label>
+            <div class="col-md-8">
+              <input ng-model="ic.newGame.numPlayers" type="text"  class="form-control" placeholder="ex. 07/13/17">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="win" class="col-md-2 control-label">Win?</label>
+            <div class="col-md-8">
+              <input ng-model="ic.newGame.estGameTime" type="text" class="form-control" placeholder="Win?">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes" class="col-md-2 control-label">Notes</label>
+            <div class="col-md-8">
+              <input ng-model="ic.newGame.estGameTime" type="text" class="form-control" placeholder="Notes">
+            </div>
+          </div>
+
+          </div>
+          <div class="form-group">
+            <div class="col-md-offset-1 col-md-8">
+              <button type="submit" class="btn btn-default" ng-click="ic.addGames()">Add Game Session</button>
+            </div>
+          </div>
+        </form>
+
+        </div>
+      </form>
+      <!--html code for basic game information
+          html code for notes/game sessions
+          html code for adding an image-->
+
+
+
+  </div>
+</div>

@@ -1,5 +1,27 @@
+//Requires
 var express = require('express');
 var router = express.Router();
+var Game = require('../models/addgame.schema.js');
+
+
+//Handles delete route to delete a game
+router.delete('/:id', function(req, res) {
+  console.log('in delete route');
+  console.log('delete game with id: ', req.params.id);
+
+  Game.findByIdAndRemove(
+    { _id: req.params.id },
+    function(err, data) {
+      if(err) {
+        console.log('remove error: ', err);
+        res.sendStatus(500);
+      } else {
+        res.sendStatus(200);
+      }
+    }
+  );
+
+});
 
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function(req, res) {
@@ -27,6 +49,5 @@ router.get('/logout', function(req, res) {
   req.logOut();
   res.sendStatus(200);
 });
-
 
 module.exports = router;
