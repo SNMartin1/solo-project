@@ -1,6 +1,14 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
-
+  <div>
     <h1 id="welcome" class="lead">Welcome, {{uc.userObject.userName}}!</h1>
     <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button>
+  </div>
+    <div ng-repeat="game in uc.userGames" class="well col-md-4 col-sm-6" id="games" style="background-color: lightgray;">
+      <ul>
+        <li>{{game.name}}</li>
+        <li>Number of Players: {{game.numPlayers}}</li>
+        <li>Estimated Game Time: {{game.estGameTime}}</li>
+      </ul>
+
 </div>
