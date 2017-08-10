@@ -3,40 +3,40 @@
   <div class="addGameSession">
       <form>
         <div>
-
+          <h2>Add Game Session</h2>
           <form class="form-horizontal">
           <div class="form-group">
             <label for="playNumber" class="col-md-2 control-label">Add Play</label>
             <div class="col-md-8">
-              <input ng-model="ic.newGame.name" type="text" class="form-control" placeholder="Yes or No">
+              <input ng-model="gpc.newGameSession.addPlay" type="text" class="form-control" placeholder="Yes or No">
             </div>
           </div>
 
           <div class="form-group">
             <label for="datePlayed" class="col-md-2 control-label">Date Played</label>
             <div class="col-md-8">
-              <input ng-model="ic.newGame.numPlayers" type="text"  class="form-control" placeholder="ex. 07/13/17">
+              <input ng-model="gpc.newGameSession.date" type="text"  class="form-control" placeholder="ex. 07/13/17">
             </div>
           </div>
 
           <div class="form-group">
             <label for="win" class="col-md-2 control-label">Win?</label>
             <div class="col-md-8">
-              <input ng-model="ic.newGame.estGameTime" type="text" class="form-control" placeholder="Win?">
+              <input ng-model="gpc.newGameSession.win" type="text" class="form-control" placeholder="Win?">
             </div>
           </div>
 
           <div class="form-group">
             <label for="notes" class="col-md-2 control-label">Notes</label>
             <div class="col-md-8">
-              <input ng-model="ic.newGame.estGameTime" type="text" class="form-control" placeholder="Notes">
+              <input ng-model="gpc.newGameSession.notes" type="text" class="form-control" placeholder="Notes">
             </div>
           </div>
 
           </div>
           <div class="form-group">
             <div class="col-md-offset-1 col-md-8">
-              <button type="submit" class="btn btn-default" ng-click="ic.addGames()">Add Game Session</button>
+              <button type="submit" class="btn btn-default" ng-click="gpc.addGameSession()">Add Game Session</button>
             </div>
           </div>
         </form>
@@ -46,11 +46,26 @@
       <!--html code for basic game information
           html code for notes/game sessions
           html code for adding an image-->
-          <ul>
-            <li>{{gpc.selectedGame.name}}</li>
-            <li>Number of Players: {{game.numPlayers}}</li>
-            <li>Estimated Game Time: {{game.estGameTime}}</li>
+          <h2>{{gpc.selectedGame.name}}</h2>
+        <div>
+          <ul id="basicGameInfo">
+            <li>Number of Players: {{gpc.selectedGame.numPlayers}}</li>
+            <li>Estimated Game Time: {{gpc.selectedGame.estGameTime}}</li>
           </ul>
+        </div>
+        <div>
+          <ul id="gameStats">
+            <li>Times Played: {{}}</li>
+            <li> Wins: {{}}</li>
+          </ul>
+        </div>
 
+        <div>
+          <ul id="gameSession">
+            <li>Date Played: {{}}</li>
+            <li>Win? {{}}</li>
+            <li>Notes: {{}}</li>
+          <ul>
+        </div>
   </div>
 </div>

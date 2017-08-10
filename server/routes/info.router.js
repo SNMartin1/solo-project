@@ -21,6 +21,7 @@ router.post('/', function(req, res) {
   console.log('log the data: ', req.body);
   console.log('log the user: ', req.user);
 
+  //create a newGame object
   var newGame = {name: req.body.name, numPlayers: req.body.numPlayers, estGameTime: req.body.estGameTime, userId: req.user._id};
   //create an object instance from Game model
   var addGame = new Game(newGame);

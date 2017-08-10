@@ -4,6 +4,7 @@ myApp.controller('InfoController', function(UserService, $http) {
   gc.userService = UserService;
 
   //function to add game to user's library
+  //newGame var from info.router.
     gc.addGames = function() {
         console.log('add game', gc.newGame);
         $http.post('/info', gc.newGame)
