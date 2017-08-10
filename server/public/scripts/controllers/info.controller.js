@@ -9,8 +9,8 @@ myApp.controller('InfoController', function(UserService, $http) {
         $http.post('/info', gc.newGame)
           .then(function(response) {
             console.log('added game:', response);
-            //alert("Game added!");
-
+            alert("Game added!");
+            gc.newGame = {};
           });
       };
 
