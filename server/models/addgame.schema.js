@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var gameStatsSchema = new Schema({
   addPlay: {type: String, required: true},
   date : {type: String},
-  win: {type: Boolean},
+  win: {type: String},
   notes: {type: String}
 });
 

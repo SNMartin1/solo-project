@@ -1,37 +1,39 @@
 <div></div>
 <div class="container">
-  <div class="addGameSession">
+  <div class="col-md-12">
+    <div class="addGameSession">
       <form>
         <div>
           <h2>Add Game Session</h2>
           <form class="form-horizontal">
-          <div class="form-group">
-            <label for="playNumber" class="col-md-2 control-label">Add Play</label>
-            <div class="col-md-8">
-              <input ng-model="gpc.newGameSession.addPlay" type="text" class="form-control" placeholder="Yes or No">
+            <div class="form-group">
+              <div class="col-md-3">
+                <label for="playNumber" class="control-label">Add Play</label>
+                <input ng-model="gpc.newGameSession.addPlay" type="text" class="form-control" placeholder="Yes or No">
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label for="datePlayed" class="col-md-2 control-label">Date Played</label>
-            <div class="col-md-8">
-              <input ng-model="gpc.newGameSession.date" type="text"  class="form-control" placeholder="ex. 07/13/17">
-            </div>
-          </div>
+            <div class="form-group">
+              <div class="col-md-3">
+                <label for="datePlayed" class="control-label">Date Played</label>
 
-          <div class="form-group">
-            <label for="win" class="col-md-2 control-label">Win?</label>
-            <div class="col-md-8">
-              <input ng-model="gpc.newGameSession.win" type="text" class="form-control" placeholder="Win?">
+                <input ng-model="gpc.newGameSession.date" type="text"  class="form-control" placeholder="ex. 07/13/17">
+              </div>
             </div>
-          </div>
+            <div class="form-group">
+              <div class="col-md-3">
+                <label for="win" class="control-label">Win?</label>
+                <input ng-model="gpc.newGameSession.win" type="text" class="form-control" placeholder="Win?">
+              </div>
+            </div>
 
-          <div class="form-group">
-            <label for="notes" class="col-md-2 control-label">Notes</label>
-            <div class="col-md-8">
-              <input ng-model="gpc.newGameSession.notes" type="text" class="form-control" placeholder="Notes">
+            <div class="form-group">
+              <div class="col-md-3">
+                <label for="notes" class="control-label">Notes</label>
+
+                <input ng-model="gpc.newGameSession.notes" type="textarea" class="form-control" placeholder="Notes">
+              </div>
             </div>
-          </div>
 
           </div>
           <div class="form-group">
@@ -41,31 +43,31 @@
           </div>
         </form>
 
-        </div>
-      </form>
-      <!--html code for basic game information
-          html code for notes/game sessions
-          html code for adding an image-->
-          <h2>{{gpc.selectedGame.name}}</h2>
-        <div>
-          <ul id="basicGameInfo">
-            <li>Number of Players: {{gpc.selectedGame.numPlayers}}</li>
-            <li>Estimated Game Time: {{gpc.selectedGame.estGameTime}}</li>
-          </ul>
-        </div>
-        <div>
-          <ul id="gameStats">
-            <li>Times Played: {{}}</li>
-            <li> Wins: {{}}</li>
-          </ul>
-        </div>
+      </div>
+    </form>
+    <!--html code for basic game information
+    html code for notes/game sessions
+    html code for adding an image-->
+    <h2>{{gpc.selectedGame.name}}</h2>
+    <div class="well col-md-6 col-sm-6">
+      <ul id="basicGameInfo">
+        <li>Number of Players: {{gpc.selectedGame.numPlayers}}</li>
+        <li>Estimated Game Time: {{gpc.selectedGame.estGameTime}}</li>
+      </ul>
+    </div>
+    <div class="well col-md-6 col-sm-6">
+      <ul id="gameStats">
+        <li>(Times) Played: {{gpc.selectedGame.sessions.addPlay}}</li>
+        <li> Wins: {{gpc.selectedGame.sessions.win}}</li>
+      </ul>
+    </div>
 
-        <div>
-          <ul id="gameSession">
-            <li>Date Played: {{}}</li>
-            <li>Win? {{}}</li>
-            <li>Notes: {{}}</li>
-          <ul>
-        </div>
+    <div ng-repeat="session in gpc.selectedGame.sessions" class="well col-md-4 col-sm-6">
+    <ul id="gameSession">
+      <li>Date Played: {{session.date}}</li>
+      <li>Win? {{session.win}}</li>
+      <li>Notes: {{session.notes}}</li>
+      <ul>
+      </div>
+    </div>
   </div>
-</div>

@@ -5,8 +5,8 @@
     <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button>
   </div>
     <div  ng-repeat="game in uc.userGames" class="well col-md-4 col-sm-6" id="games" style="background-color: lightgray;">
+      <p id="gameName">{{game.name}}</p>
       <ul>
-        <li>{{game.name}}</li>
         <li>Number of Players: {{game.numPlayers}}</li>
         <li>Estimated Game Time: {{game.estGameTime}}</li>
       </ul>

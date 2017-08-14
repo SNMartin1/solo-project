@@ -17,6 +17,10 @@ body, html {
   padding: 15px;
 }
 
+#gameName {
+  font-size: 20px;
+}
+
 #entryForm {
   margin-top: 14px;
 }
@@ -26,7 +30,7 @@ body, html {
 }
 
 #games {
-  height: 200px;
+  height: 300px;
   width:  300px;
   padding: 5px;
   margin-right: 15px;
