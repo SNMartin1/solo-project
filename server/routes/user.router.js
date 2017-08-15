@@ -21,7 +21,31 @@ router.delete('/:id', function(req, res) {
     }
   );
 
-});
+}); //end of router.delete
+
+//PUT route to update game information
+router.put('/:id', function(req, res) {
+  console.log('new location: ', req.body);
+
+  Game.findByIdAndUpdate(
+    { _id: req.params.id },
+    { $set: {
+      name: req.body.name,
+      numPlayers: req.body.numPlayers,
+      estGameTime: req.body.estGameTime
+      }
+    }, // data to replace
+    function(err, data) {
+      if(err) {
+        console.log('update error: ', err);
+        res.sendStatus(500);
+      } else {
+        res.sendStatus(200);
+      }
+    }
+  );
+
+}); //end of router.put to update game information
 
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function(req, res) {
@@ -40,7 +64,7 @@ router.get('/', function(req, res) {
     // should probably be res.sendStatus(403) and handled client-side, esp if this is an AJAX request (which is likely with AngularJS)
     res.send(false);
   }
-});
+}); //end of router.get for authentication
 
 // clear all server session information about this user
 router.get('/logout', function(req, res) {
@@ -48,6 +72,6 @@ router.get('/logout', function(req, res) {
   console.log('Logged out');
   req.logOut();
   res.sendStatus(200);
-});
+}); //end of router.get for logout
 
 module.exports = router;

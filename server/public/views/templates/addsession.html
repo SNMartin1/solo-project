@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="col-md-12">
+    <div class="addGameSession">
+      <form>
+        <div>
+          <h2>Add Game Session</h2>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <div class="col-md-3">
+                <label for="playNumber" class="control-label">Add Play</label>
+                <input ng-model="gsc.newGameSession.addPlay" type="text" class="form-control" placeholder="Yes or No">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-3">
+                <label for="datePlayed" class="control-label">Date Played</label>
+
+                <input ng-model="gsc.newGameSession.date" type="text"  class="form-control" placeholder="ex. 07/13/17">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-3">
+                <label for="win" class="control-label">Win?</label>
+                <input ng-model="gsc.newGameSession.win" type="text" class="form-control" placeholder="Win?">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-3">
+                <label for="notes" class="control-label">Notes</label>
+
+                <input ng-model="gsc.newGameSession.notes" type="textarea" class="form-control" placeholder="Notes">
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <div class="col-md-offset-1 col-md-8">
+              <button type="submit" class="btn btn-default" ng-click="gsc.addGameSession()">Add Game Session</button>
+            </div>
+          </div>
+        </form>

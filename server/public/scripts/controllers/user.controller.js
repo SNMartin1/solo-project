@@ -25,6 +25,7 @@ myApp.controller('UserController', function(UserService, GamepageService, $http,
     });
   }
 
+// delete a specific game that is clicked on
   uc.deleteGame = function(id) {
     console.log('delete game with id: ', id);
     $http.delete('/user/' + id)
@@ -32,4 +33,18 @@ myApp.controller('UserController', function(UserService, GamepageService, $http,
         getGames();
       });
     };
-  });
+
+//update game information
+  uc.updateGame = function(game) {
+      console.log('update game: ', game);
+      var data = {
+                  name: 'go',
+                  numPlayers: '1',
+                  estGameTime: '40 min'
+                  };
+      $http.put('/user/' + game._id, data)
+        .then(function(response) {
+          getGames();
+        });
+    }; //end of updateGame
+  }); //end of controller

@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'xeditable']);
 
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
@@ -12,6 +12,10 @@ myApp.config(function($routeProvider, $locationProvider) {
     .when('/register', {
       templateUrl: '/views/templates/register.html',
       controller: 'LoginController as lc'
+    })
+    .when('/gamesession', {
+      templateUrl: '/views/templates/addsession.html',
+      controller: 'GamesessionController as gsc'
     })
     .when('/about', {
       templateUrl: 'views/templates/about.html',
@@ -41,4 +45,8 @@ myApp.config(function($routeProvider, $locationProvider) {
     .otherwise({
       redirectTo: 'home'
     });
+});
+
+myApp.run(function(editableOptions) {
+  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
 });

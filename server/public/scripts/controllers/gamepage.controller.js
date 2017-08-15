@@ -12,10 +12,21 @@ myApp.controller('GamepageController', function(UserService, GamepageService, $h
 
   getSessions();
 
+
+  // delete a specific game session that is clicked on
+    gpc.deleteSession = function(id) {
+      console.log('delete session with id: ', id);
+      $http.delete('/gamepage/' + id + '/' + gpc.selectedGame._id)
+        .then(function(response) {
+          getSessions();
+        });
+      };
+
+
   function getSessions() {
-    $http.get('/gamepage').then(function(response) {
+    $http.get('/gamepage/' + gpc.selectedGame._id).then(function(response) {
       console.log("response data: ", response.data);
-      gpc.gameSessions = response.data;
+      gpc.selectedGame.sessions = response.data[0].sessions;
       console.log("gameSessions: ", gpc.gameSessions);
     });
    //logic for math of times played and wins

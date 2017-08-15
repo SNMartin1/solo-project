@@ -5,13 +5,15 @@
     <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button>
   </div>
     <div  ng-repeat="game in uc.userGames" class="well col-md-4 col-sm-6" id="games" style="background-color: lightgray;">
-      <p id="gameName">{{game.name}}</p>
+      <p id="gameName">  <a href="#" editable-text="game.name">{{ game.name || "empty" }}</a>
+</p>
       <ul>
         <li>Number of Players: {{game.numPlayers}}</li>
         <li>Estimated Game Time: {{game.estGameTime}}</li>
       </ul>
-      <button class="btn btn-danger" ng-click="uc.deleteGame(game._id)">Delete Game</button>
-      <button class="btn btn-primary">Update Info</button>
-      <button class="btn btn-primary" id="quickAdd">Quick Add Game Session</button>
-      <button class="btn btn-primary" id="gameDetails" ng-click="uc.selectGame(game)">View Game Details</button>
+      <button class="btn btn-danger" ng-click="uc.deleteGame(game._id)">Delete</button>
+      <button class="btn btn-primary" ng-click="uc.updateGame(game)">Edit</button>
+      <br>
+      <button class="btn btn-primary" id="quickAdd">Add Session</button>
+      <button class="btn btn-primary" id="gameDetails" ng-click="uc.selectGame(game)">Game Details</button>
 </div>
