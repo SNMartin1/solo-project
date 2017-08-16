@@ -25,7 +25,7 @@ router.delete('/:id', function(req, res) {
 
 //PUT route to update game information
 router.put('/:id', function(req, res) {
-  console.log('new location: ', req.body);
+  console.log('update game information: ', req.body);
 
   Game.findByIdAndUpdate(
     { _id: req.params.id },

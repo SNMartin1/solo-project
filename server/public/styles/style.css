@@ -17,6 +17,7 @@ body, html {
   padding: 15px;
 }
 
+
 #deleteBtn {
   background-color: #db7093;
   border-color: #db7093;
@@ -57,14 +58,6 @@ body, html {
   padding-top: 20px;
 }
 
-.repeatSessions {
-  margin-right: 15px;
-  margin-bottom: 15px;
-  height: 150px;
-  background-color: lightgray;
-  border: solid gray 1px;
-  padding-top: 20px;
-}
 
 #gameSession {
   list-style-type: none;
@@ -86,7 +79,6 @@ body, html {
 #welcome {
   text-align: left;
   font-size: 50px;
-
 }
 
 
@@ -112,33 +104,9 @@ body, html {
 
 .btn-danger {
   margin-left: 10px;
+  background-color: #db7093;
+  border-color: #db7093;
 }
-
-#quickAdd {
-  margin-top: 8px;
-  margin-left: 10px;
-}
-
-#gamePageBtns {
-  margin-top: 60px;
-}
-
-/* NAV BAR */
-.navbar {
-  background-color: #333333;
-  height: 700px;
-  border-radius: 0px;
-  display: inline-flex;
-  margin-right: 30px
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-}
-
-
 
 li a {
   display: block;
@@ -153,4 +121,50 @@ li a {
 li a:hover {
   text-decoration: underline;
   color: #eee;
+}
+
+
+#quickAdd {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+#gamePageBtns {
+  margin-top: 60px;
+}
+
+
+
+/* NAV BAR */
+.navbar {
+  background-color: #333333;
+  height: 100vh;
+  border-radius: 0px;
+  display: inline-flex;
+  margin-right: 30px
+}
+
+ul {
+    padding: 0px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Session Divs */
+.repeatSessions {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  height: 200px;
+  background-color: lightgray;
+  border: solid gray 1px;
+  padding-top: 20px;
+}
+
+.sessionBtn {
+  margin-top: 60px;
+}
+
+#session-delete {
+  background-color: #db7093;
+  border-color: #db7093;
 }

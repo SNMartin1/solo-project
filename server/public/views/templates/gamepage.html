@@ -17,15 +17,55 @@
     </div>
 
     <div ng-repeat="session in gpc.selectedGame.sessions" class="repeatSessions col-md-4 col-sm-6">
+    <form editable-form name="editableForm" onaftersave="gpc.updateSession(session)">
+        <div>
+          <span class="datePlayed">Date Played: </span>
+        <span editable-text="session.date">{{ session.date || 'empty' }}</span>
+      </div>
+
+          <div>
+            <!-- editable username (text with validation) -->
+            <span class="win">Win? </span>
+            <span editable-text="session.win">{{ session.win || 'empty' }}</span>
+          </div>
+          <div>
+            <span class="notes">Notes: </span>
+            <span editable-text="session.notes">{{ session.notes || 'empty' }}</span>
+          </div>
+
+          <div>
+            <!-- buttons to submit / cancel form -->
+            <span ng-show="editableForm.$visible">
+              <button type="submit" class="btn btn-primary" ng-disabled="editableForm.$waiting">
+                Save
+              </button>
+              <button type="button" class="btn btn-default" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">
+                Cancel
+              </button>
+            </span>
+          </div>
+        </form>
+
+          <div class="sessionBtn">
+            <button id="session-delete" class="btn btn-danger" ng-click="gpc.deleteSession(session._id)">Delete</button>
+            <button type="button" class="btn btn-primary" ng-click="editableForm.$show()" ng-show="!editableForm.$visible">
+                    Edit
+                  </button>
+            <!-- <button class="btn btn-primary" ng-click="gpc.updateSession(session)">Edit</button> -->
+          </div>
+          </div>
+
+
+    <!-- <div ng-repeat="session in gpc.selectedGame.sessions" class="repeatSessions col-md-4 col-sm-6">
     <ul id="gameSession">
       <li>Date Played: {{session.date}}</li>
       <li>Win? {{session.win}}</li>
       <li>Notes: {{session.notes}}</li>
-      <ul>
-        <div class="sessionBtn">
+      <ul> -->
+        <!-- <div class="sessionBtn">
           <button class="btn btn-danger" ng-click="gpc.deleteSession(session._id)">Delete</button>
           <button class="btn btn-primary" ng-click="gpc.updateSession(game._id)">Edit</button>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->

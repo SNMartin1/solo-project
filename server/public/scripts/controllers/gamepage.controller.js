@@ -22,6 +22,20 @@ myApp.controller('GamepageController', function(UserService, GamepageService, $h
         });
       };
 
+      //update game session information
+        gpc.updateSession = function(session) {
+            console.log('update game session: ', session);
+            var data = {
+                        date: session.date,
+                        win: session.win,
+                        notes: session.notes
+                        };
+            $http.put('/gamepage/' + session._id + '/' + gpc.selectedGame._id, data)
+              .then(function(response) {
+                getSessions();
+              });
+          }; //end of updateSession
+
 
   function getSessions() {
     $http.get('/gamepage/' + gpc.selectedGame._id).then(function(response) {
@@ -30,7 +44,7 @@ myApp.controller('GamepageController', function(UserService, GamepageService, $h
       console.log("gameSessions: ", gpc.gameSessions);
     });
    //logic for math of times played and wins
-
+  
   }
 
 

@@ -61,6 +61,49 @@ router.delete('/:id/:gameId', function(req, res) {
 
 });
 
+//PUT route to update game session information
+router.put('/:id/:gameId', function(req, res) {
+  console.log('update game session: ', req.body);
+
+  Game.findById(req.params.gameId,
+    function(err, game) {
+      if(err) {
+        res.sendStatus(500);
+      } else {
+        var session = game.sessions.id(req.params.id);
+        console.log('log out session: ', session);
+        session.date = req.body.date;
+        session.win = req.body.win;
+        session.notes = req.body.notes;
+        game.save(function(err){
+          if(err) {
+          res.sendStatus(500);
+          } else {
+            res.sendStatus(200);
+          }
+        });
+      }
+  }); // end addNewGameSession
+  // Old way
+  // Game.findByIdAndUpdate(
+  //   { _id: req.params.id },
+  //   { $set: {
+  //     date: req.body.date,
+  //     win: req.body.win,
+  //     notes: req.body.notes
+  //     }
+  //   }, // data to replace
+  //   function(err, data) {
+  //     if(err) {
+  //       console.log('update error: ', err);
+  //       res.sendStatus(500);
+  //     } else {
+  //       res.sendStatus(200);
+  //     }
+  //   }
+  // );
+});
+
 
 router.post('/:gameId', function(req, res) {
   console.log('ID of game to update: ', req.params.gameId);
