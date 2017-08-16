@@ -17,9 +17,14 @@ body, html {
   padding: 15px;
 }
 
+#deleteBtn {
+  background-color: #db7093;
+  border-color: #db7093;
+}
 
 #gameName {
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 #entryForm {
