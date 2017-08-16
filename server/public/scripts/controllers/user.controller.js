@@ -38,9 +38,9 @@ myApp.controller('UserController', function(UserService, GamepageService, $http,
   uc.updateGame = function(game) {
       console.log('update game: ', game);
       var data = {
-                  name: 'go',
-                  numPlayers: '1',
-                  estGameTime: '40 min'
+                  name: game.name,
+                  numPlayers: game.numPlayers,
+                  estGameTime: game.estGameTime
                   };
       $http.put('/user/' + game._id, data)
         .then(function(response) {
