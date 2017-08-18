@@ -15,4 +15,13 @@ myApp.controller('InfoController', function(UserService, $http) {
           });
       };
 
+      gc.client = filestack.init('AF1yAqcFiSfm7kzeLq5Rqz');
+      gc.showPicker = function() {
+         gc.client.pick({
+         }).then(function(result) {
+           gc.newGame.img = result.filesUploaded[0].url;
+             console.log(JSON.stringify(result.filesUploaded));
+         });
+     };
+
 });

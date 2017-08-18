@@ -14,6 +14,7 @@ var gameSchema = new Schema({
   numPlayers: {type: String},
   estGameTime: {type: String},
   userId: {type: String},
+  img: {},
   //refer to other schema here - need an array to store game session info.
   sessions: [gameStatsSchema]
 });

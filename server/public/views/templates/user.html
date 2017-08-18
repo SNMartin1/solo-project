@@ -7,16 +7,25 @@
       <div>
         <h1 id="welcome" >Welcome, {{uc.userObject.userName}}!</h1>
       </div>
+      <div class="intro">
+        <h4 id="libraryHeader">Game Library</h4>
+        <p>This is your library of games. To add a game, click on the Add Game
+          link on the menu to the left. <br>To add a game session, click on the game
+          you played, and then, click on the Add Session link on the menu to the left.</p>
+      </div>
     </div>
     <div class="userPage row">
       <div  ng-repeat="game in uc.userGames" class="well col-md-4 col-sm-6" id="games" style="background-color: lightgray;">
 
         <form editable-form name="editableForm" onaftersave="uc.updateGame(game)">
           <div>
+            <img class="col-sm-4" id="img" ng-src="{{game.img}}" height="100px" width="100px"/>
+          </div>
+          <div class="col-sm-8">
             <span id="gameName" editable-text="game.name">{{ game.name || 'empty' }}</span>
-            <div>
-
+            <div class="playerInfo">
               <div>
+
                 <!-- editable username (text with validation) -->
                 <span class="numPlayers">Number of Players: </span>
                 <span editable-text="game.numPlayers">{{ game.numPlayers || 'empty' }}</span>

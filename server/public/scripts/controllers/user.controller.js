@@ -10,6 +10,9 @@ myApp.controller('UserController', function(UserService, GamepageService, $http,
 
   getGames();
 
+
+
+
   uc.selectGame = function(game) {
     console.log("picked game: ", game);
     GamepageService.gameInfo.currentGame = game;

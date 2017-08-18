@@ -22,7 +22,13 @@ router.post('/', function(req, res) {
   console.log('log the user: ', req.user);
 
   //create a newGame object
-  var newGame = {name: req.body.name, numPlayers: req.body.numPlayers, estGameTime: req.body.estGameTime, userId: req.user._id};
+  var newGame = {
+              name: req.body.name,
+              numPlayers: req.body.numPlayers,
+              estGameTime: req.body.estGameTime,
+              userId: req.user._id,
+              img: req.body.img
+            };
   //create an object instance from Game model
   var addGame = new Game(newGame);
 

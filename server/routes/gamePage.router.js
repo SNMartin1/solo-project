@@ -111,7 +111,12 @@ router.post('/:gameId', function(req, res) {
   console.log('log the user to terminal: ', req.user);
 
   //create a newGameSession object
-  var newGameSession = {addPlay: req.body.addPlay, date: req.body.date, win: req.body.win, notes: req.body.notes, userId: req.user._id};
+  var newGameSession = {
+                    addPlay: req.body.addPlay,
+                    date: req.body.date,
+                    win: req.body.win,
+                    notes: req.body.notes,
+                    userId: req.user._id};
   console.log("newGameSession: ", newGameSession);
 
   //adding newGameSession from gamepage.controller to the db
