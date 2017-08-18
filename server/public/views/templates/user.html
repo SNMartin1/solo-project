@@ -1,45 +1,56 @@
-<div ng-include="'views/partials/nav.html'"></div>
-<div class="userHTML">
-  <div>
-    <h1 id="welcome" class="lead">Welcome, {{uc.userObject.userName}}!</h1>
+<div class="row">
+  <div class="col-md-2 col-xs-2" >
+    <div  ng-include="'views/partials/nav.html'"></div>
   </div>
-    <div  ng-repeat="game in uc.userGames" class="well col-md-4 col-sm-6" id="games" style="background-color: lightgray;">
-      <form editable-form name="editableForm" onaftersave="uc.updateGame(game)">
-        <div>
-        <span id="gameName" editable-text="game.name">{{ game.name || 'empty' }}</span>
-        <div>
+  <div class="col-md-10 col-sm-10">
+    <div class="userHTML">
+      <div>
+        <h1 id="welcome" >Welcome, {{uc.userObject.userName}}!</h1>
+      </div>
+    </div>
+    <div class="userPage row">
+      <div  ng-repeat="game in uc.userGames" class="well col-md-4 col-sm-6" id="games" style="background-color: lightgray;">
 
+        <form editable-form name="editableForm" onaftersave="uc.updateGame(game)">
           <div>
-            <!-- editable username (text with validation) -->
-            <span class="numPlayers">Number of Players: </span>
-            <span editable-text="game.numPlayers">{{ game.numPlayers || 'empty' }}</span>
-          </div>
-          <div>
-            <span class="estTime">Estimated Game Time: </span>
-            <span editable-text="game.estGameTime">{{ game.estGameTime || 'empty' }}</span>
-          </div>
+            <span id="gameName" editable-text="game.name">{{ game.name || 'empty' }}</span>
+            <div>
 
-          <div>
-            <!-- buttons to submit / cancel form -->
-            <span ng-show="editableForm.$visible">
-              <button type="submit" class="btn btn-primary" ng-disabled="editableForm.$waiting">
-                Save
-              </button>
-              <button type="button" class="btn btn-default" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">
-                Cancel
-              </button>
-            </span>
+              <div>
+                <!-- editable username (text with validation) -->
+                <span class="numPlayers">Number of Players: </span>
+                <span editable-text="game.numPlayers">{{ game.numPlayers || 'empty' }}</span>
+              </div>
+              <div>
+                <span class="estTime">Estimated Game Time: </span>
+                <span editable-text="game.estGameTime">{{ game.estGameTime || 'empty' }}</span>
+              </div>
+
+              <div>
+                <!-- buttons to submit / cancel form -->
+                <span ng-show="editableForm.$visible">
+                  <button type="submit" class="btn btn-primary" ng-disabled="editableForm.$waiting">
+                    Save
+                  </button>
+                  <button type="button" class="btn btn-default" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">
+                    Cancel
+                  </button>
+                </span>
+              </div>
+            </div>
           </div>
         </form>
 
-      <div id="gamePageBtns">
-      <button class="btn btn-danger" id="deleteBtn" ng-click="uc.deleteGame(game._id)">Delete</button>
-      <!--<button class="btn btn-primary" ng-click="uc.updateGame(game)">Edit</button>-->
-      <!-- button to show form -->
-      <button type="button" class="btn btn-primary" ng-click="editableForm.$show()" ng-show="!editableForm.$visible">
-        Edit
-      </button>
-      <button class="btn btn-primary" id="gameDetails" ng-click="uc.selectGame(game)">Game Details</button>
+        <div id="gamePageBtns">
+          <button class="btn btn-danger" id="deleteBtn" ng-click="uc.deleteGame(game._id)">Delete</button>
+          <!--<button class="btn btn-primary" ng-click="uc.updateGame(game)">Edit</button>-->
+          <!-- button to show form -->
+          <button type="button" class="btn btn-primary" ng-click="editableForm.$show()" ng-show="!editableForm.$visible">
+            Edit
+          </button>
+          <button class="btn btn-primary" id="gameDetails" ng-click="uc.selectGame(game)">Game Details</button>
+        </div>
       </div>
-</div>
+    </div>
+  </div>
 </div>

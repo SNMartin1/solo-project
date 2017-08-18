@@ -1,8 +1,17 @@
+<div class="row">
+  <div class="col-md-2 col-xs-2" >
 <div ng-include="'views/partials/navgamepage.html'"></div>
+</div>
+<div  class="col-md-10 col-xs-10">
     <!--html code for basic game information
     html code for notes/game sessions
     html code for adding an image-->
     <h2 id="gamePageName">{{gpc.selectedGame.name}}</h2>
+    <div class="sections">
+      <h4 class="infoLabel col-md-4 col-sm-6">Game Info</h4>
+      <h4 class="col-md-4 col-sm-6">Game Stats</h4>
+    </div>
+
     <div class="gameInfo col-md-4 col-sm-6">
       <ul id="basicGameInfo">
         <li>Number of Players: {{gpc.selectedGame.numPlayers}}</li>
@@ -11,11 +20,14 @@
     </div>
     <div class="gameInfo col-md-4 col-sm-6">
       <ul id="gameStats">
-        <li>(Times) Played: {{gpc.selectedGame.sessions.addPlay}}</li>
-        <li> Wins: {{gpc.selectedGame.sessions.win}}</li>
+        <li>(Times) Played: {{gpc.numberPlays}}</li>
+        <li> Wins: {{gpc.counter}}</li>
       </ul>
     </div>
 
+    <div class="col-md-10 col-sm-6">
+      <h4>Game Sessions</h4>
+    </div>
     <div ng-repeat="session in gpc.selectedGame.sessions" class="repeatSessions col-md-4 col-sm-6">
     <form editable-form name="editableForm" onaftersave="gpc.updateSession(session)">
         <div>
@@ -47,7 +59,7 @@
         </form>
 
           <div class="sessionBtn">
-            <button id="session-delete" class="btn btn-danger" ng-click="gpc.deleteSession(session._id)">Delete</button>
+            <button id="session-delete" class="btn btn-primary" ng-click="gpc.deleteSession(session._id)">Delete</button>
             <button type="button" class="btn btn-primary" ng-click="editableForm.$show()" ng-show="!editableForm.$visible">
                     Edit
                   </button>
@@ -69,3 +81,5 @@
       </div>
     </div>
   </div> -->
+</div>
+</div>

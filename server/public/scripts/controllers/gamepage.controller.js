@@ -13,6 +13,7 @@ myApp.controller('GamepageController', function(UserService, GamepageService, $h
   getSessions();
 
 
+
   // delete a specific game session that is clicked on
     gpc.deleteSession = function(id) {
       console.log('delete session with id: ', id);
@@ -36,17 +37,26 @@ myApp.controller('GamepageController', function(UserService, GamepageService, $h
               });
           }; //end of updateSession
 
+var counter = 0;
 
   function getSessions() {
     $http.get('/gamepage/' + gpc.selectedGame._id).then(function(response) {
       console.log("response data: ", response.data);
       gpc.selectedGame.sessions = response.data[0].sessions;
+      console.log('response.data: ', response.data[0].sessions);
       console.log("gameSessions: ", gpc.gameSessions);
     });
    //logic for math of times played and wins
-  
-  }
-
+     gpc.counter = 0;
+     gpc.numberPlays = gpc.selectedGame.sessions.length;
+     for (var i = 0; i < gpc.selectedGame.sessions.length; i++) {
+       if (gpc.selectedGame.sessions[i].win === "yes" || gpc.selectedGame.sessions[i].win ==="true" || gpc.selectedGame.sessions[i].win === "Yes" || gpc.selectedGame.sessions[i].win ==="True") {
+            gpc.counter += 1;
+            console.log('gpc.counter: ', gpc.counter);
+            console.log('gpc.numberPlays: ', gpc.numberPlays);
+          }
+        }
+      }
 
   //function to add game session info to individual game page
   //newGameSession is a var from gamePage.router
