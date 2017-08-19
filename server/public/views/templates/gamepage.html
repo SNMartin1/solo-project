@@ -1,15 +1,16 @@
 <div class="row">
-  <div class="col-md-2 col-xs-2" >
+  <div class="col-md-3 col-sm-3" >
 <div ng-include="'views/partials/navgamepage.html'"></div>
 </div>
-<div  class="col-md-10 col-xs-10">
+<div  class="col-md-9">
     <!--html code for basic game information
     html code for notes/game sessions
     html code for adding an image-->
     <h2 id="gamePageName">{{gpc.selectedGame.name}}</h2>
     <div class="sections">
       <h4 class="infoLabel col-md-4 col-sm-6">Game Info</h4>
-      <h4 class="col-md-4 col-sm-6">Game Stats</h4>
+      <h4 class="col-md-4 col-sm-6" text-decoration="underline #337ab7"
+>Game Stats</h4>
     </div>
 
     <div class="gameInfo col-md-4 col-sm-6">
@@ -31,8 +32,7 @@
     <div ng-repeat="session in gpc.selectedGame.sessions" class="repeatSessions col-md-4 col-sm-6">
     <form editable-form name="editableForm" onaftersave="gpc.updateSession(session)">
         <div>
-          <span class="datePlayed">Date Played: </span>
-        <span editable-text="session.date">{{ session.date || 'empty' }}</span>
+        <h5><span editable-text="session.date">{{ session.date || 'empty' }}</span></h5>
       </div>
 
           <div>

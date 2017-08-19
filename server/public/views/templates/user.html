@@ -1,21 +1,18 @@
 <div class="row">
-  <div class="col-md-2 col-xs-2" >
+  <div class="col-md-3 col-sm-3" >
     <div  ng-include="'views/partials/nav.html'"></div>
   </div>
-  <div class="col-md-10 col-sm-10">
+  <div class="col-md-9 col-sm-10">
     <div class="userHTML">
       <div>
         <h1 id="welcome" >Welcome, {{uc.userObject.userName}}!</h1>
       </div>
       <div class="intro">
         <h4 id="libraryHeader">Game Library</h4>
-        <p>This is your library of games. To add a game, click on the Add Game
-          link on the menu to the left. <br>To add a game session, click on the game
-          you played, and then, click on the Add Session link on the menu to the left.</p>
       </div>
     </div>
     <div class="userPage row">
-      <div  ng-repeat="game in uc.userGames" class="well col-md-4 col-sm-6" id="games" style="background-color: lightgray;">
+      <div  ng-repeat="game in uc.userGames" class="well col-md-4 col-sm-6" id="games" style="background-color: white;">
 
         <form editable-form name="editableForm" onaftersave="uc.updateGame(game)">
           <div>
@@ -35,7 +32,7 @@
                 <span editable-text="game.estGameTime">{{ game.estGameTime || 'empty' }}</span>
               </div>
 
-              <div>
+              <div class="xeditableBtns">
                 <!-- buttons to submit / cancel form -->
                 <span ng-show="editableForm.$visible">
                   <button type="submit" class="btn btn-primary" ng-disabled="editableForm.$waiting">
