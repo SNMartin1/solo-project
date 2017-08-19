@@ -117,6 +117,10 @@ div.container.col-md-8 {
   border: 1px solid black;
   margin-bottom: 10px;
 }
+
+img#imgNavBar.col-sm-12 {
+  padding: none;
+}
 #entryForm {
   margin-top: 14px;
 }
@@ -313,4 +317,12 @@ div.container.col-md-8 {
 
 #session-delete:hover {
   background-color: #94ae44;
+}
+
+.addGameSession {
+  width: 400px;
+}
+
+#addSessionBtn {
+  margin-top: 10px;
 }
