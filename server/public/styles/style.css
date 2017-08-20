@@ -6,25 +6,59 @@ body, html {
   height: 100%;
 }
 
-.headerGradient {
-  background: lightgray; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, lightgray, white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, lightgray, white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, lightgray, white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, lightgray, white); /* Standard syntax */
-}
-
-
 main {
   height: 100%;
 }
 
+label.col-md-6.control-label {
+  margin-top: 10px;
+}
+
+div.container.col-md-8 {
+  padding-top: 80px;
+}
+
+.container p{
+  margin-top : 14px;
+}
 
 
+/* header elements */
+.instructions .container h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.instructions {
+  background-color: #333333;
+  color: darkgray;
+  padding: 15px;
+}
+
+.lead {
+  color: #337ab7;
+}
+
+.subheader {
+  margin-left: 100px;
+  margin-top: none;
+}
+
+.headerGradient {
+  background: lightgray; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right top, lightgray, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom left, lightgray, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom left, lightgray, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom left, lightgray, white); /* Standard syntax */
+}
+
+
+
+/* Login Page */
 #loginBackground {
   background: url(../images/game-background.jpg);
-  width: 1000px;
-  height: 700px;
+  width: 1200px;
+  height: 900px;
   border: 1px solid black;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,34 +72,29 @@ main {
   margin-top: 50px;
 }
 
-
-
-/* header.html, */
-.instructions .container h1 {
-  font-size: 60px;
-  font-weight: 600;
-}
-
-.lead {
-  color: #337ab7;
-}
-
-.subheader {
-  margin-left: 100px;
-  margin-top: none;
-}
-
 .loginLabel {
   font-size: 36px;
 }
 
-.instructions {
-  background-color: #333333;
-  color: darkgray;
-  padding: 15px;
+.message {
+  padding: 10px 0;
+}
+
+.message p {
+  margin-left: 10px;
+}
+
+.message:nth-child(odd) {
+   background-color: #eeeeee;
+}
+
+.message:nth-child(even) {
+  background-color: #f8f8f8;
 }
 
 
+
+/* Buttons */
 #deleteBtn {
   background-color: #b4da55;
   border-color: #94ae44;
@@ -85,14 +114,11 @@ main {
   margin-top: 5px;
 }
 
-label.col-md-6.control-label {
-  margin-top: 10px;
+#logOutBtn {
+  float: right;
 }
 
-div.container.col-md-8 {
-  padding-top: 80px;
-}
-
+/* Game Library Page 'Cards' (user.html)*/
 #gameName {
   text-align: left;
   font-size: 24px;
@@ -113,26 +139,6 @@ div.container.col-md-8 {
   border: 1px solid black;
 }
 
-#imgNavBar {
-  border: 1px solid black;
-  margin-bottom: 10px;
-}
-
-img#imgNavBar.col-sm-12 {
-  padding: none;
-}
-#entryForm {
-  margin-top: 14px;
-}
-
-#container {
-  margin-top: 10px;
-}
-
-#gamePageName {
-  font-size: 50px;
-}
-
 #games {
   height: 250px;
   width: 400px;
@@ -143,6 +149,43 @@ img#imgNavBar.col-sm-12 {
   border-left: none;
   border-bottom: solid lightgray 1px;
   border-right: solid lightgray 1px;
+}
+
+#libraryHeader {
+  text-decoration: underline;
+}
+
+/*Game Library Page */
+
+#welcome {
+  text-align: left;
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+
+/* Individual Game Page (gamepage.html)*/
+#imgNavBar {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+img#imgNavBar.col-sm-12 {
+  padding: none;
+}
+
+#entryForm {
+  margin-top: 14px;
+}
+
+#container {
+  margin-top: 10px;
+}
+
+#gamePageName {
+  font-size: 50px;
 }
 
 .gameInfo {
@@ -156,15 +199,6 @@ img#imgNavBar.col-sm-12 {
   border-radius: 4px;
 }
 
-#libraryHeader {
-  text-decoration: underline;
-}
-
-
-#gameSession {
-  list-style-type: none;
-}
-
 .gameInfo li {
   list-style-type: none;
   font-size: 16px;
@@ -174,67 +208,7 @@ img#imgNavBar.col-sm-12 {
   margin-right: 15px;
 }
 
-#games li {
-  clear: left;
-  list-style-type: none;
-}
 
-#logOutBtn {
-  float: right;
-}
-
-#welcome {
-  text-align: left;
-  font-size: 50px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-
-.container p{
-  margin-top : 14px;
-}
-
-.message {
-  padding: 10px 0;
-}
-
-.message p {
-  margin-left: 10px;
-}
-
-.message:nth-child(odd) {
-   background-color: #eeeeee;
-}
-
-.message:nth-child(even) {
-  background-color: #f8f8f8;
-}
-
-
-.navbar li a {
-  display: block;
-  color: black;
-  text-align: right;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-.navbar li a:hover {
-  text-decoration: underline;
-  color: #eee;
-  cursor: pointer;
-}
-.navbar ul {
-    background-color: white;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scrolling if the sidenav has too much content */
-}
 
 #quickAdd {
   margin-top: 8px;
@@ -266,6 +240,30 @@ img#imgNavBar.col-sm-12 {
   margin-top: 15px;
   margin-right: 25px;
   margin-left: 15px;
+}
+
+.navbar li a {
+  display: block;
+  color: black;
+  text-align: right;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover { /* Change the link color to #111 (black) on hover */
+  text-decoration: underline;
+  color: #eee;
+  cursor: pointer;
+}
+
+.navbar ul {
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
 .sideNav button {

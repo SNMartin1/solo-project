@@ -1,10 +1,18 @@
-# Name of Project
+# Game Vault
 
-One Paragraph of project description goes here. Link to the live version of the app if it's hosted on Heroku.
+A Board Game Library for users to keep track of their library of board games, track gaming stats, and gaming sessions.
 
 ## Built With
 
-List technologies and frameworks here
+MongoDB
+Express
+AngularJS
+Node.js
+Bootstrap
+Passport Authentication
+Filestack API
+Heroku
+mLabs
 
 ## Getting Started
 
@@ -37,11 +45,16 @@ High level list of items completed.
 - [x] Feature a
 - [x] Feature b
 
-### Next Steps
+### Next Steps - Stretch Goals
 
 Features that you would like to add at some point in the future.
 
-- [ ] Feature c
+  [ ] Bring in boardgamegeek API for box cover art, publishing information,
+      and information about rules.
+  [ ] Add ability to track if your game has been loaned out to a friend.
+  [ ] Add ability to link with other user's accounts (become friends, be able
+      to tag them in sessions played.)
+  [ ] Ability for the user to upload pictures to each session.
 
 ## Deployment
 
@@ -49,9 +62,11 @@ Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* Name of author(s)
+* Nicole Martin
 
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
+* Hat tip to my instructors Chris Black, Kris S., and Huck for helping with code suggestions as well as general support through this project.  
+* Hat tip to my classmates Ted, Ben S., and Amanda for helping to work through some coding logic when I was stuck on a few things.
+* Hat tip to my classmates Anne, Catherine, and Ben H. for helping me by being my 'rubber duck' as I worked out the logic for a few pieces of code.

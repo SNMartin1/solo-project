@@ -3,9 +3,8 @@
 <div ng-include="'views/partials/navgamepage.html'"></div>
 </div>
 <div  class="col-md-9">
-    <!--html code for basic game information
-    html code for notes/game sessions
-    html code for adding an image-->
+    <!-- code for basic game information
+         code for notes/game sessions-->
     <h2 id="gamePageName">{{gpc.selectedGame.name}}</h2>
     <div class="sections">
       <h4 class="infoLabel col-md-4 col-sm-6">Game Info</h4>
@@ -66,20 +65,5 @@
             <!-- <button class="btn btn-primary" ng-click="gpc.updateSession(session)">Edit</button> -->
           </div>
           </div>
-
-
-    <!-- <div ng-repeat="session in gpc.selectedGame.sessions" class="repeatSessions col-md-4 col-sm-6">
-    <ul id="gameSession">
-      <li>Date Played: {{session.date}}</li>
-      <li>Win? {{session.win}}</li>
-      <li>Notes: {{session.notes}}</li>
-      <ul> -->
-        <!-- <div class="sessionBtn">
-          <button class="btn btn-danger" ng-click="gpc.deleteSession(session._id)">Delete</button>
-          <button class="btn btn-primary" ng-click="gpc.updateSession(game._id)">Edit</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </div>
 </div>
