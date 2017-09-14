@@ -36,14 +36,18 @@ Include one or two screen shots of your project here (optional). Remove if unuse
 
 ## Documentation
 
-Link to a read-only version of your scope document or other relevant documentation here (optional). Remove if unused.
+https://docs.google.com/document/d/1v0PcxyyWPO4E6tMXy2hq-wi-3uneS-GhyBaCJf9F65Q/edit?usp=sharing
 
 ### Completed Features
 
 High level list of items completed.
 
-- [x] Feature a
-- [x] Feature b
+- [x] Add A Game
+- [x] Add A Game Session
+- [x] Game library page, listing all the games in a user's library
+- [x] Page for individual games (list of information about that game including games seesions played)
+- [x] A count of all the game sessions play (at top of of the individual game page
+- [x] A count of the number of times that a user has played an individual game
 
 ### Next Steps - Stretch Goals
 
@@ -54,7 +58,7 @@ Features that you would like to add at some point in the future.
   [ ] Add ability to track if your game has been loaned out to a friend.
   [ ] Add ability to link with other user's accounts (become friends, be able
       to tag them in sessions played.)
-  [ ] Ability for the user to upload pictures to each session.
+  [x] Ability for the user to upload pictures to each session.
 
 ## Deployment
 
@@ -68,5 +72,5 @@ Add additional notes about how to deploy this on a live system
 ## Acknowledgments
 
 * Hat tip to my instructors Chris Black, Kris S., and Huck for helping with code suggestions as well as general support through this project.  
-* Hat tip to my classmates Ted, Ben S., Antonio and Amanda for helping to work through some coding logic when I was stuck on a few things.
-* Hat tip to my classmates Anne, Catherine, Dexter and Ben H. for helping me by being my 'rubber duck' as I worked out the logic for a few pieces of code.
+* Hat tip to my classmates Ted, Ben S., and Amanda for helping to work through some coding logic when I was stuck on a few things.
+* Hat tip to my classmates Anne, Catherine, and Ben H. for helping me by being my 'rubber duck' as I worked out the logic for a few pieces of code.
