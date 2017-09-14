@@ -4,19 +4,24 @@ A Board Game Library for users to keep track of their library of board games, tr
 
 ## Built With
 
-MongoDB
-Express
-AngularJS
-Node.js
-Bootstrap
-Passport Authentication
-Filestack API
-Heroku
-mLabs
+- MongoDB
+- Express
+- AngularJS
+- Node.js
+- Bootstrap
+- Passport Authentication
+- Filestack API
+- Heroku
+- mLabs
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+Be sure to run npm install in terminal after downloading this project.
+
+- run:
+    - npm install --save
 
 ### Prerequisites
 
