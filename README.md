@@ -68,5 +68,5 @@ Add additional notes about how to deploy this on a live system
 ## Acknowledgments
 
 * Hat tip to my instructors Chris Black, Kris S., and Huck for helping with code suggestions as well as general support through this project.  
-* Hat tip to my classmates Ted, Ben S., and Amanda for helping to work through some coding logic when I was stuck on a few things.
-* Hat tip to my classmates Anne, Catherine, and Ben H. for helping me by being my 'rubber duck' as I worked out the logic for a few pieces of code.
+* Hat tip to my classmates Ted, Ben S., Antonio and Amanda for helping to work through some coding logic when I was stuck on a few things.
+* Hat tip to my classmates Anne, Catherine, Dexter and Ben H. for helping me by being my 'rubber duck' as I worked out the logic for a few pieces of code.

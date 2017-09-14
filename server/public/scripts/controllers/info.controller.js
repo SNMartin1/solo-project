@@ -10,6 +10,12 @@ myApp.controller('InfoController', function(UserService, $http) {
         $http.post('/info', gc.newGame)
           .then(function(response) {
             console.log('added game:', response);
+            //sweetalert2 code
+            // swal(
+            //     'Game Added!',
+            //     'You clicked the button!',
+            //     'success'
+            //   );
             alert("Game added!");
             gc.newGame = {};
           });
