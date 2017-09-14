@@ -32,7 +32,7 @@ Steps to get the development environment running.
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+https://github.com/SNMartin1/solo-project/blob/master/server/public/images/Screen%20Shot%202017-09-14%20at%2012.54.08%20PM.png
 
 ## Documentation
 
