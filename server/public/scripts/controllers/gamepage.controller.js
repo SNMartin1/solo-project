@@ -12,13 +12,15 @@ myApp.controller('GamepageController', function(UserService, GamepageService, $h
 
   getSessions();
 
-
-
   // delete a specific game session that is clicked on
     gpc.deleteSession = function(id) {
       console.log('delete session with id: ', id);
       $http.delete('/gamepage/' + id + '/' + gpc.selectedGame._id)
         .then(function(response) {
+          swal(
+              'Game Session Deleted!'
+              // 'success'
+            );
           getSessions();
         });
       };

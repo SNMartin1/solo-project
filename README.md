@@ -1,6 +1,6 @@
 # Game Vault
 
-A Board Game Library for users to keep track of their library of board games, track gaming stats, and gaming sessions.
+The Game Vault is a full stack application for users to keep track of their library of board games, track gaming stats, and gaming sessions.
 
 ## Built With
 
@@ -25,10 +25,11 @@ Be sure to run npm install in terminal after downloading this project.
 
 ### Prerequisites
 
-Link to software that is required to install the app (e.g. node).
+Link to software that is required to install the app (e.g. node, Filestack API).
 
 - [Node.js](https://nodejs.org/en/)
-- List other prerequisites here
+- Filestack API - You will need your own API Key. You can find instructions for
+  getting a key at https://www.filestack.com/docs.
 
 
 ### Installing
@@ -37,11 +38,11 @@ Steps to get the development environment running.
 
 ## Screen Shot
 
-https://github.com/SNMartin1/solo-project/blob/master/server/public/images/Screen%20Shot%202017-09-14%20at%2012.54.08%20PM.png
+![Game Library Page](https://github.com/SNMartin1/solo-project/blob/master/server/public/images/Screen%20Shot%202017-09-14%20at%2012.54.08%20PM.png?raw=true)
 
 ## Documentation
 
-https://docs.google.com/document/d/1v0PcxyyWPO4E6tMXy2hq-wi-3uneS-GhyBaCJf9F65Q/edit?usp=sharing
+[Game Vault Scope Document](https://docs.google.com/document/d/1v0PcxyyWPO4E6tMXy2hq-wi-3uneS-GhyBaCJf9F65Q/edit?usp=sharing)
 
 ### Completed Features
 
@@ -50,7 +51,7 @@ High level list of items completed.
 - [x] Add A Game
 - [x] Add A Game Session
 - [x] Game library page, listing all the games in a user's library
-- [x] Page for individual games (list of information about that game including games seesions played)
+- [x] Page for individual games (list of information about that game including games sessions played)
 - [x] A count of all the game sessions play (at top of of the individual game page
 - [x] A count of the number of times that a user has played an individual game
 
@@ -58,12 +59,12 @@ High level list of items completed.
 
 Features that you would like to add at some point in the future.
 
-  [ ] Bring in boardgamegeek API for box cover art, publishing information,
+-  [ ] Bring in boardgamegeek API for box cover art, publishing information,
       and information about rules.
-  [ ] Add ability to track if your game has been loaned out to a friend.
-  [ ] Add ability to link with other user's accounts (become friends, be able
+-  [ ] Add ability to track if your game has been loaned out to a friend.
+-  [ ] Add ability to link with other user's accounts (become friends, be able
       to tag them in sessions played.)
-  [x] Ability for the user to upload pictures to each session.
+-  [x] Ability for the user to upload pictures to each session.
 
 ## Deployment
 

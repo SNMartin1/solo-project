@@ -36,28 +36,6 @@ router.delete('/:id/:gameId', function(req, res) {
           }
         }
   );
-  //
-  // Game.save(function(err) {
-  //   console.log('here?', err);
-  //   if(err) {
-  //     res.sendStatus(500);
-  //   } else {
-  //     res.send(200);
-  //   }
-  // });
-
-  // Game.findByIdAndRemove(
-  //   { _id: parent.children.id(req.params.id) },
-  //   function(err, data) {
-  //     if(err) {
-  //       console.log('remove error: ', err);
-  //       res.sendStatus(500);
-  //     } else {
-  //       console.log('things went fine?', data);
-  //       res.sendStatus(200);
-  //     }
-  //   }
-  // );
 
 });
 
@@ -80,29 +58,11 @@ router.put('/:id/:gameId', function(req, res) {
           res.sendStatus(500);
           } else {
             res.sendStatus(200);
-          }
-        });
-      }
-  }); // end addNewGameSession
-  // Old way
-  // Game.findByIdAndUpdate(
-  //   { _id: req.params.id },
-  //   { $set: {
-  //     date: req.body.date,
-  //     win: req.body.win,
-  //     notes: req.body.notes
-  //     }
-  //   }, // data to replace
-  //   function(err, data) {
-  //     if(err) {
-  //       console.log('update error: ', err);
-  //       res.sendStatus(500);
-  //     } else {
-  //       res.sendStatus(200);
-  //     }
-  //   }
-  // );
-});
+          } //end of else statement for sendStatus
+        }); //end of game.save function
+      } //end of else statement with session data
+  }); //end of Game.findById
+}); //end of put route to update game session information.
 
 
 router.post('/:gameId', function(req, res) {
@@ -136,8 +96,8 @@ router.post('/:gameId', function(req, res) {
             }
           });
         }
-    }); // end addNewGameSession
-  }
+    });
+  } // end addNewGameSession
   //calling addNewGameSession function
   addNewGameSession({_id: req.params.gameId}, newGameSession, function(success){
         if (success) {

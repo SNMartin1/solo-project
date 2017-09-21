@@ -11,16 +11,15 @@ myApp.controller('InfoController', function(UserService, $http) {
           .then(function(response) {
             console.log('added game:', response);
             //sweetalert2 code
-            // swal(
-            //     'Game Added!',
-            //     'You clicked the button!',
-            //     'success'
-            //   );
-            alert("Game added!");
+            swal(
+                'Game Added!',
+                'success'
+              );
             gc.newGame = {};
           });
       };
 
+//Filestack API - Used to add a photo when a game is added.
       gc.client = filestack.init('AF1yAqcFiSfm7kzeLq5Rqz');
       gc.showPicker = function() {
          gc.client.pick({
