@@ -15,7 +15,7 @@
     "angular-route": "^1.6.4",
     "angular-touch": "^1.6.5",
     "angular-xeditable": "^0.8.0",
-    "bcrypt": "^1.0.2",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.13.3",
     "bootstrap": "^3.3.5",
     "express": "^4.13.1",
